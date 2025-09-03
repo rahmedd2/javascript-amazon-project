@@ -84,7 +84,18 @@ export function renderOrderSummary(){
             
           })
         })
+          const u= document.querySelectorAll('.js-update')
+          u.forEach((update)=>{
+          update.addEventListener('click', ()=>{
 
+            update.innerHTML=`<input type="text" style="width:30px;">`
+            update.addEventListener('keydown',(event)=>{
+              if(event.key==='Enter'){
+                update.innerHTML=`Update`
+              }
+            })
+          })
+        })
       }
         
         
